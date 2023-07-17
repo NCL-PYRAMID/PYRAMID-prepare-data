@@ -1,5 +1,5 @@
-kind: Model
-api_version: v1beta1
+kind: M
+api_version: v1beta2
 metadata:
   display_name: PYRAMID <model> Prepare Data
   name: pyramid-prepare-data
@@ -10,21 +10,63 @@ metadata:
 spec:
   inputs:
     parameters:
-      - name: NAME
-        title: Run name
+      - name: RUN_START_DATE
+        title: Start date
+        description: The date at which the Model execution should start.
         type: string
-        description: Name for the run, used in the title field of the metadata file.
-        default: PYRAMID <model> Prepare Data
+        default: "2023-06-20"
         required: true
-    dataslots:
-      - name: Pre-read weather data
-        description: >
-          Description of the dataset format
-        default:
-          - <TO BE COMPLETED WITH UUID OF WEATHER DATASET from READ EXTERNAL>
-        path: inputs
+
+      - name: RUN_END_DATE
+        title: End date
+        description: The date at which the Model execution should stop.
+        type: string
+        default: "2023-06-30"
         required: true
+      
+      - name: BB_E_L
+        title: Bounding Box Easting Lower
+        description: Analysis region bounding box Easting lower value
+        type: integer
+        default: 355000
+        required: true
+
+      - name: BB_N_L
+        title: Bounding Box Northing Lower
+        description: Analysis region bounding box Northing lower value
+        type: integer
+        default: 534000
+        required: true
+
+      - name: BB_E_U
+        title: Bounding Box Easting Upper
+        description: Analysis region bounding box Easting upper value
+        type: integer
+        default: 440000
+        required: true
+
+      - name: BB_N_U
+        title: Bounding Box Northing Upper
+        description: Analysis region bounding box Northing lower value
+        type: integer
+        default: 609000
+        required: true
+
+      - name: RESOLUTION
+        title: Data resolution
+        description: Resolution of the data grid (in <units>?)
+        type: integer
+        default: 1000
+        required: true
+
+      - name: READ_MODE
+        title: Model reading mode
+        description: This parameter dictates whether the model should read from the API, or from a pre-prepared testing data set.
+        type: boolean
+        default: true
+        required: false
   outputs:
     datasets:
       - name: PYRAMID <model> Prepare Data output
+        type: txt
         description: SHETRAN-ready weather data

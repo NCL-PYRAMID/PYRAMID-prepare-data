@@ -56,7 +56,7 @@ RUN jupyter nbconvert --to python prepare-data.ipynb
 #RUN python -m pip install -r requirements.txt
 
 # Entry point
-ENV READ_EA_ENV=docker
+ENV PREPARE_DATA_ENV=docker
 WORKDIR $APP_HOME
 #CMD ["conda", "run", "-n", "prepare-data", "--no-capture-output", "/bin/bash", "run.sh"]
 CMD ["/bin/bash"]
