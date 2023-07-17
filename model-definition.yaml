@@ -65,6 +65,14 @@ spec:
         type: boolean
         default: true
         required: false
+
+    dataslots:
+      - name: SHETRAN Data
+        description: SHETRAN static data
+        default:
+          - 6ee117a4-ebb6-482d-ab5a-5d5faf121afd
+        path: inputs/static
+        required: true
   outputs:
     datasets:
       - name: PYRAMID <model> Prepare Data output
