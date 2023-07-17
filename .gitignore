@@ -1,0 +1,46 @@
+###############################################################################
+# DAFNI
+###############################################################################
+# DAFNI directories
+data/stage_one/
+data/outputs/
+data/inputs/*
+!data/inputs/README.md
+
+# DAFNI uploads
+*.tar
+*.tar.gz
+
+###############################################################################
+# Application
+###############################################################################
+# Compilation targets
+cuda/build/
+cuda/dist/
+cuda/hipims.egg-info/
+
+# Python compiler
+**/__pycache__/
+
+# OS specific
+**/.DS_Store
+
+# Editor configurations
+**/.vscode/
+
+###############################################################################
+# Terraform
+###############################################################################
+# Local .terraform directories
+**/.terraform/*
+
+# .tfstate files
+*.tfstate
+*.tfstate.*
+
+# .tfvars files
+*.tfvars
+
+# Temporary files, logs etc
+**/*.swp
+**/*.log
