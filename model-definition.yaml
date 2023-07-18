@@ -3,10 +3,10 @@ api_version: v1beta2
 metadata:
   display_name: PYRAMID <model> Prepare Data
   name: pyramid-prepare-data
-  summary: Prepares data gathered by the read-external (or read-external-dummy) model stages for SHETRAN
+  summary: Prepares data gathered by the data reading model stages for SHETRAN and HiPIMS
   publisher: Newcastle University
   description: >
-    Turns externally-sourced weather data into a SHETRAN-appropriate input.
+    Turns externally-sourced weather data into SHETRAN and HiPIMS-appropriate input.
 spec:
   inputs:
     parameters:
@@ -70,11 +70,19 @@ spec:
       - name: SHETRAN Data
         description: SHETRAN static data
         default:
-          - 6ee117a4-ebb6-482d-ab5a-5d5faf121afd
+          - a36cb623-ce8a-4a9b-9a4f-2702a72827be
         path: inputs/static
         required: true
+
+      - name: HiPIMS Data
+        description: HiPIMS static data
+        default:
+          - 7348d367-51df-499c-b15d-1ecf82882301
+        path: inputs/static
+        required: true
+
   outputs:
     datasets:
-      - name: PYRAMID <model> Prepare Data output
+      - name: PYRAMID <model> Processed weather data produced by the prepare-data model
         type: txt
-        description: SHETRAN-ready weather data
+        description: Weather data ready for processing by SHETRAN and HiPIMS
