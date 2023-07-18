@@ -58,5 +58,4 @@ RUN jupyter nbconvert --to python prepare-data.ipynb
 # Entry point
 ENV PREPARE_DATA_ENV=docker
 WORKDIR $APP_HOME
-#CMD ["conda", "run", "-n", "prepare-data", "--no-capture-output", "/bin/bash", "run.sh"]
-CMD ["/bin/bash"]
+CMD ["conda", "run", "-n", "prepare-data", "--no-capture-output", "/bin/bash", "run.sh"]
