@@ -30,6 +30,7 @@ in_path = data_path / pathlib.Path("inputs")
 
 # OUTPUT paths
 out_path = data_path / pathlib.Path("outputs")
+metadata_path = out_path
 os.makedirs(metadata_path, exist_ok=True)
 
 
