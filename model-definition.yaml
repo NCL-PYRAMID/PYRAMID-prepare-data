@@ -62,8 +62,13 @@ spec:
       - name: READ_MODE
         title: Model reading mode
         description: This parameter dictates whether the model should read from the API, or from a pre-prepared testing data set.
-        type: boolean
-        default: true
+        type: string
+        options:
+          - name: "dataset"
+            title: "Model inputs from a DAFNI dataset"
+          - name: "model"
+            title: "Model inputs from another DAFNI model"
+        default: "model"
         required: false
 
     dataslots:
@@ -80,6 +85,11 @@ spec:
           - 7348d367-51df-499c-b15d-1ecf82882301
         path: inputs/static
         required: true
+
+      - name: Pre-prepared Rainfall Data
+        description: Pre-prepared rainfall data in the same format as would be produced by the rainfall API-reading models
+        path: inputs/preprepared
+        required: false
 
   outputs:
     datasets:
