@@ -88,7 +88,7 @@ spec:
 
       - name: Pre-prepared Rainfall Data
         description: Pre-prepared rainfall data in the same format as would be produced by the rainfall API-reading models
-        path: inputs/preprepared
+        path: inputs/MET
         required: false
 
   outputs:
