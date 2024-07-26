@@ -54,7 +54,7 @@ NOTE: 1. and 2. are missing as cannot test this whilst the Urban Observatory rad
 
 #### Data outputs format
 - `\outputs` - root outputs data folder
-    - `\SHETRAN` - SHETRAN rainfall input data, which should be in the correct format to run the model if running at 15 minute resolution (Note: We somehow need to add start date and data resolution into the library shetran set-up file I think).
+    - `\SHETRAN` - SHETRAN rainfall input data, which should be in the correct format to run the model if running at 15 minute resolution (Note:thed start date and data resolution should be added into the library shetran set-up file).
     - `\HIPIMS` - HIPIMS rainfall input data, which should be in the correct format to run the model at 15 minute resolution
 
 ### Data minimum requirements
@@ -183,10 +183,10 @@ The deployed model can be run in a DAFNI workflow. See the [DAFNI workflow docum
 
 
 ## Roadmap
-- [x] Initial Research  
-- [x] Minimum viable product  <-- You are Here  
-- [ ] Alpha Release  
-- [ ] Feature-Complete Release  
+- [x] Initial Research
+- [x] Minimum viable product
+- [x] Alpha Release
+- [x] Feature-Complete Release
 
 ## Contributing
 The `prepare-data` for DAFNI project has ended. Pull requests from outside the project team will be ignored.
@@ -195,7 +195,7 @@ The `prepare-data` for DAFNI project has ended. Pull requests from outside the p
 The stable branch is `main`. All development should take place on new branches. Pull requests are enabled on `main`.
 
 ## License
-TBC
+GPL-3.0-or-later
 
 ## Acknowledgements
 This work was funded by NERC, grant ref. NE/V00378X/1, “PYRAMID: Platform for dYnamic, hyper-resolution, near-real time flood Risk AssessMent Integrating repurposed and novel Data sources”. See the project funding [URL](https://gtr.ukri.org/projects?ref=NE/V00378X/1).
