@@ -186,7 +186,7 @@ The deployed model can be run in a DAFNI workflow. See the [DAFNI workflow docum
 - [x] Initial Research
 - [x] Minimum viable product
 - [x] Alpha Release
-- [x] Feature-Complete Release
+- [ ] Feature-Complete Release
 
 ## Contributing
 The `prepare-data` for DAFNI project has ended. Pull requests from outside the project team will be ignored.
